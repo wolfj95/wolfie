@@ -10,11 +10,21 @@ export default function Layout ({ children }) {
     <div
       css={css`
         display: grid;
-        grid-template-columns: 15% auto;
+        grid-template-columns: 30% auto;
       `}
     >
-      <Nav/>
-      {children}
+      <div
+        css={css`
+          position: sticky;
+          top: 0;
+          height: 100vh;
+        `}
+      >
+        <Nav/>
+      </div>
+      <div>
+        {children}
+      </div>
     </div>
   )
 }

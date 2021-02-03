@@ -4,7 +4,6 @@ import { css } from '@emotion/react'
 import { rhythm } from '../utils/typography'
 
 export default function SectionItem (props) {
-  console.log(props.sectionClass)
   return (
     <div
       css={css`

@@ -114,7 +114,7 @@ const IndexPage = () => {
                 />
                   <div
                     css={css`
-                      height: 400px;
+                      height: 450px;
                     `}
                   >
                   </div>

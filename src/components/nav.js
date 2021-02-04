@@ -3,9 +3,14 @@ import { css } from '@emotion/react'
 import { Link } from 'gatsby'
 import { rhythm } from '../utils/typography'
 
+// data
+import { sections } from '../data/sections'
+
 // styles
 const navLink = css({
-  textDecoration: 'none'
+  textDecoration: 'none',
+  color: 'black',
+  padding: rhythm(.25),
 })
 
 class Nav extends React.Component{
@@ -15,18 +20,23 @@ class Nav extends React.Component{
     this.state =
       {
         showSpeech: false,
+        highlightIndex: -1,
       }
     this.speechRef = React.createRef()
   }
 
   showSpeechBubble (props) {
     this.setState({ showSpeech: true })
-    console.log("show")
+    //console.log("show")
   }
 
   hideSpeechBubble (props) {
     this.setState({ showSpeech: false })
-    console.log("hide")
+    //console.log("hide")
+  }
+
+  setHighlightIndex (index) {
+    this.setState({ highlightIndex: index })
   }
 
   render () {
@@ -98,42 +108,20 @@ class Nav extends React.Component{
               list-style-type:none;
             `}
           >
-            <li>
-              <a href="#"
-                css={[
-                  navLink
-                ]}
+            {sections.map((section, index) =>
+              <li
+                key={index}
               >
-                Teaching
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                css={[
-                  navLink
-                ]}
-              >
-                Programming
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                css={[
-                  navLink
-                ]}
-              >
-                Research
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                css={[
-                  navLink
-                ]}
-              >
-                etc.
-              </a>
-            </li>
+                <a href="#"
+                  css={[
+                    navLink,
+                    this.state.highlightIndex === index ? section.sectionClass : 'none'
+                  ]}
+                >
+                  {section.sectionTitle}
+                </a>
+              </li>
+            )}
           </ul>
         </div>
     )

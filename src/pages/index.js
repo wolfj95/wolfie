@@ -11,16 +11,19 @@ import Layout from '../components/layout'
 import Nav from '../components/nav'
 import IndexSpacer from '../components/spacer'
 import SectionItem from '../components/item'
+import useWindowDimensions from '../components/window'
 
 
 const container = css({
-  padding: rhythm(2)
+  margin: rhythm(2)
 })
 
 
 // markup
 const IndexPage = () => {
   const navRef = React.createRef()
+  const { height } = useWindowDimensions();
+  console.log(height*0.25+300)
   return (
     <Layout>
       <div
@@ -38,20 +41,26 @@ const IndexPage = () => {
         >
           <Nav ref={navRef} />
         </div>
-        <div class="main"
+        <div className="main"
           css={[
             {
               maxWidth: '50vw'
             }
           ]}
         >
-          <div class="intro"
+          <div className="intro"
             css={[
               {
                 marginTop: '25vh',
               }
             ]}
           >
+            <div
+              css={css`
+                height: 300px;
+              `}
+            >
+            </div>
             <Waypoint 
               onEnter={({ event }) => {
                 navRef.current.showSpeechBubble()
@@ -59,17 +68,9 @@ const IndexPage = () => {
               onLeave={({ event }) => {
                 navRef.current.hideSpeechBubble()
               }} 
-              topOffset='25%'
-              bottomOffset='25%'
-            >
-              <div
-                css={css`
-                  height: 300px;
-                `}
-              >
-              </div>
-            </ Waypoint >
-            <div class="contact"
+              topOffset={height*0.25 + 200}
+            />
+            <div className="contact"
                 css={[
                   container,
                   {
@@ -80,7 +81,7 @@ const IndexPage = () => {
               github
             </div>
           </div>
-          <div class="sections">
+          <div className="sections">
             {sections.map((section, index) =>
               <div className="section" id="teaching"
                 css={[
@@ -90,35 +91,43 @@ const IndexPage = () => {
               >
                 <Waypoint 
                   onEnter={({ previousPosition, event }) => {
+                    console.log("enter top")
                     if (previousPosition === Waypoint.below) {
+                      navRef.current.setHighlightIndex(index)
                       navRef.current.showSpeechBubble()
                     } 
                   }} 
                   onLeave={({ currentPosition, event }) => {
+                    console.log("leave top")
                     if (currentPosition === Waypoint.below) {
+                      navRef.current.setHighlightIndex(index-1)
                       navRef.current.hideSpeechBubble()
                     } 
                   }} 
-                  bottomOffset='60%'
+                  //debug={true}
+                  bottomOffset='75%'
                 />
                   <div
                     css={css`
-                      height: 300px;
+                      height: 400px;
                     `}
                   >
                   </div>
                 <Waypoint 
                   onEnter={({ previousPosition, event }) => {
+                    console.log("enter bottom")
                     if (previousPosition === Waypoint.above) {
                       navRef.current.showSpeechBubble()
                     } 
                   }} 
                   onLeave={({ currentPosition, event }) => {
+                    console.log("leave bottom")
                     if (currentPosition === Waypoint.above) {
                       navRef.current.hideSpeechBubble()
                     } 
                   }} 
-                  topOffset='50%'
+                  topOffset={height*0.25 + 200}
+                  //debug={true}
                 />
                 {section.projects.map((project, index) =>
                   <SectionItem 

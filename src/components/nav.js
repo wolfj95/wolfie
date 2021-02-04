@@ -13,6 +13,26 @@ const navLink = css({
   padding: rhythm(.25),
 })
 
+class NavLink extends React.Component {
+  handleClick = () => {
+    this.props.onButtonClick(this.props.sectionRef);
+  }
+
+  render() {
+    return (
+      <button
+        onClick={this.handleClick}
+        css={[
+          navLink,
+          this.props.highlightIndex === this.props.index ? this.props.section.sectionClass : 'none'
+        ]}
+      >
+        {this.props.section.sectionTitle}
+      </button>
+    )
+  }
+}
+
 class Nav extends React.Component{
 
   constructor (props) {
@@ -23,6 +43,7 @@ class Nav extends React.Component{
         highlightIndex: -1,
       }
     this.speechRef = React.createRef()
+    this.sectionRefs = props.sectionRefs
   }
 
   showSpeechBubble (props) {
@@ -39,7 +60,13 @@ class Nav extends React.Component{
     this.setState({ highlightIndex: index })
   }
 
+  scrollToSection (sectionRef) {
+    //console.log(sectionRef)
+    sectionRef.current.scrollIntoView()
+  }
+
   render () {
+    console.log(this.sectionRefs)
     return (
         <div
           css={css`
@@ -50,15 +77,10 @@ class Nav extends React.Component{
           `}
         >
           <div>
-            <Link to={'/'}
-              css={css`
-                text-decoration: none;
-                text-align: center;
-              `}
-            >
               <h1
                 css={[
                   {
+                    textAlign: 'center',
                     fontSize: rhythm(3),
                     transform: 'scale(-1, 1)'
                   }
@@ -66,7 +88,6 @@ class Nav extends React.Component{
               >
                 🐺
               </h1>
-            </Link>
             <div
               css={css`
                 position: relative;
@@ -112,14 +133,13 @@ class Nav extends React.Component{
               <li
                 key={index}
               >
-                <a href="#"
-                  css={[
-                    navLink,
-                    this.state.highlightIndex === index ? section.sectionClass : 'none'
-                  ]}
-                >
-                  {section.sectionTitle}
-                </a>
+                <NavLink 
+                  section={section}
+                  sectionRef={this.sectionRefs[index]}
+                  index={index}
+                  highlightIndex={this.state.highlightIndex}
+                  onButtonClick={this.scrollToSection}
+                />
               </li>
             )}
           </ul>

@@ -23,7 +23,10 @@ const container = css({
 const IndexPage = () => {
   const navRef = React.createRef()
   const { height } = useWindowDimensions();
-  console.log(height*0.25+300)
+  let sectionRefs = []
+  for (let i = 0; i < sections.length; i++) {
+    sectionRefs.push(React.createRef())
+  }
   return (
     <Layout>
       <div
@@ -39,7 +42,7 @@ const IndexPage = () => {
             height: 100vh;
           `}
         >
-          <Nav ref={navRef} />
+          <Nav ref={navRef} sectionRefs={sectionRefs}/>
         </div>
         <div className="main"
           css={[
@@ -64,6 +67,7 @@ const IndexPage = () => {
             <Waypoint 
               onEnter={({ event }) => {
                 navRef.current.showSpeechBubble()
+                navRef.current.setHighlightIndex(-1)
               }} 
               onLeave={({ event }) => {
                 navRef.current.hideSpeechBubble()
@@ -83,11 +87,12 @@ const IndexPage = () => {
           </div>
           <div className="sections">
             {sections.map((section, index) =>
-              <div className="section" id="teaching"
+              <div className="section" id={section.sectionName}
                 css={[
                   container
                 ]}
                 key={index}
+                ref={sectionRefs[index]}
               >
                 <Waypoint 
                   onEnter={({ previousPosition, event }) => {

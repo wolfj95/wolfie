@@ -76,7 +76,7 @@ const IndexPage = () => {
               onLeave={({ event }) => {
                 navRef.current.hideSpeechBubble()
               }} 
-              topOffset={height*0.25 + 200}
+              topOffset={height*0.25 + 300}
             />
             <div className="contact"
                 css={[

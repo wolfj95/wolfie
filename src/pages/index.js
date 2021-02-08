@@ -6,14 +6,16 @@ import { Waypoint } from 'react-waypoint';
 // data
 import { sections } from '../data/sections'
 
-// styles
+// components
 import Layout from '../components/layout'
 import Nav from '../components/nav'
 import IndexSpacer from '../components/spacer'
 import SectionItem from '../components/item'
+
+// hooks
 import useWindowDimensions from '../components/window'
 
-
+// styles
 const container = css({
   margin: rhythm(2)
 })
@@ -22,11 +24,13 @@ const container = css({
 // markup
 const IndexPage = () => {
   const navRef = React.createRef()
-  const { height } = useWindowDimensions();
+  //const { innerHeight: height } = window
+  const { height } = useWindowDimensions()
   let sectionRefs = []
   for (let i = 0; i < sections.length; i++) {
-    sectionRefs.push(React.createRef())
+    sectionRefs.push(React.useRef(null))
   }
+  console.log("rerender index. section refs: ", sectionRefs)
   return (
     <Layout>
       <div
@@ -83,6 +87,8 @@ const IndexPage = () => {
                 ]}
             >
               github
+              linkedin
+              cv
             </div>
           </div>
           <div className="sections">

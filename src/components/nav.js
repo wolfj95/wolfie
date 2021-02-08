@@ -10,7 +10,10 @@ import { sections } from '../data/sections'
 const navLink = css({
   textDecoration: 'none',
   color: 'black',
-  padding: rhythm(.25),
+  padding: 'rhythm(.25)',
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer'
 })
 
 class NavLink extends React.Component {
@@ -60,13 +63,16 @@ class Nav extends React.Component{
     this.setState({ highlightIndex: index })
   }
 
+  scrollToTop () {
+    window.scrollTo({top: 0});
+  }
+
   scrollToSection (sectionRef) {
-    //console.log(sectionRef)
     sectionRef.current.scrollIntoView()
   }
 
   render () {
-    console.log(this.sectionRefs)
+    console.log("rerender nav. section refs: ", this.sectionRefs)
     return (
         <div
           css={css`
@@ -77,6 +83,20 @@ class Nav extends React.Component{
           `}
         >
           <div>
+            <button
+              onClick={this.scrollToTop}
+              css={[
+                {
+                  textDecoration: 'none',
+                  color: 'black',
+                  //padding: 'rhythm(.25)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer'
+                }
+                //navLink,
+              ]}
+            >
               <h1
                 css={[
                   {
@@ -88,6 +108,7 @@ class Nav extends React.Component{
               >
                 🐺
               </h1>
+            </button>
             <div
               css={css`
                 position: relative;
@@ -100,8 +121,7 @@ class Nav extends React.Component{
                   css={css`
                     position: absolute;
                     z-index: 1;
-                    top: -14em;
-                    left: 7em;
+                    top: -10em;
                     width: 650px;
                   `}
                 >
@@ -127,6 +147,7 @@ class Nav extends React.Component{
           <ul
             css={css`
               list-style-type:none;
+              margin-left:0;
             `}
           >
             {sections.map((section, index) =>

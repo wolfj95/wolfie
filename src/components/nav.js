@@ -175,7 +175,7 @@ class Nav extends React.Component{
                       }
                     ]}
                   >
-                    <svg width="100%" height="100%" viewBox="0 0 650 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" xmlnsSerif="http://www.serif.com/" style={{fillRule:'evenodd',clipRule:'evenodd',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:1.5}}>
+                    <svg width="100%" height="100%" viewBox="0 0 650 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" xmlnsserif="http://www.serif.com/" style={{fillRule:'evenodd',clipRule:'evenodd',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:1.5}}>
                       <g transform="matrix(1.03425,0,0,0.804283,-113.606,-63.4149)">
                         <path
                           d={this.state.highlightIndex >= 0 ?
@@ -191,14 +191,14 @@ class Nav extends React.Component{
                   <div
                     css={[
                       {
-                        padding: "30px 20px 0 100px"
+                        padding: "40px 40px 0 100px"
                       }
                     ]}
                   >
                     {this.state.highlightIndex >= 0 ?
                       sections[this.state.highlightIndex].sectionIntro
                     :
-                      <text>
+                      <p>
                         Hi! 👋
                         <br/>
                         <br/>
@@ -231,7 +231,7 @@ class Nav extends React.Component{
                         <br/>
                         Scroll down to learn more about some of the 
                         things I’m working on or contact me any of the ways below.
-                      </text>
+                      </p>
                     }
                   </div>
                 </div>

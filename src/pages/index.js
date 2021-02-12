@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import { css } from '@emotion/react'
 import { rhythm } from '../utils/typography'
 import { Waypoint } from 'react-waypoint';
@@ -99,7 +100,7 @@ const IndexPage = () => {
                 ]}
             >
               <a
-                href="#"
+                href="https://github.com/wolfj95"
                 css={[
                   contactLink,
                 ]}
@@ -109,7 +110,7 @@ const IndexPage = () => {
                 github
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/jacobhwolf/"
                 css={[
                   contactLink,
                 ]}
@@ -118,8 +119,8 @@ const IndexPage = () => {
                 <br/>
                 linkedin
               </a>
-              <a
-                href="#"
+              <Link
+                to="resume"
                 css={[
                   contactLink,
                 ]}
@@ -127,9 +128,9 @@ const IndexPage = () => {
                 &#128196;
                 <br/>
                 cv
-              </a>
+              </Link>
               <a
-                href="#"
+                href="mailto:jacob.h.wolf@gmail.com"
                 css={[
                   contactLink,
                 ]}

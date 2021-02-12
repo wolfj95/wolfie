@@ -7,17 +7,17 @@ export default function SectionItem (props) {
   return (
     <div
       css={css`
-        padding: ${rhythm(1)};
+        padding: ${rhythm(1)} 0;
       `}
     >
       <h1
+        className="item-header"
         css={[
           props.sectionClass,
           {
             padding: rhythm(.25),
             display: 'inline-block',
             fontStyle: 'normal',
-            color: '#ffffff'
           }
         ]}
       >

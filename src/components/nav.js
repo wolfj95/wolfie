@@ -10,10 +10,18 @@ import { sections } from '../data/sections'
 const navLink = css({
   textDecoration: 'none',
   color: 'black',
-  padding: 'rhythm(.25)',
+  padding: rhythm(.25),
   background: 'none',
   border: 'none',
   cursor: 'pointer'
+})
+
+const sectionLink = css({
+  color: 'black',
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  textDecoration: 'underline'
 })
 
 class NavLink extends React.Component {
@@ -25,13 +33,37 @@ class NavLink extends React.Component {
     return (
       <button
         onClick={this.handleClick}
+        className="nav-link"
         css={[
           navLink,
           this.props.highlightIndex === this.props.index ? this.props.section.sectionClass : 'none'
         ]}
       >
-        {this.props.section.sectionTitle}
+        <h3>
+          {this.props.section.sectionTitle}
+        </h3>
       </button>
+    )
+  }
+}
+
+class SectionLink extends React.Component {
+  handleClick = () => {
+    this.props.onButtonClick(this.props.sectionRef);
+  }
+
+  render() {
+    return (
+      <a
+        onClick={this.handleClick}
+        className="speech-link"
+        css={[
+          sectionLink,
+          this.props.section.sectionClass
+        ]}
+      >
+        {this.props.children}
+      </a>
     )
   }
 }
@@ -81,6 +113,7 @@ class Nav extends React.Component{
             float: right;
             margin-top: 25vh;
             padding: ${rhythm(2)};
+            text-align: right;
           `}
         >
           <div>
@@ -128,6 +161,7 @@ class Nav extends React.Component{
                               "300px"
                             };
                     display: flex;
+                    text-align: left;
                     //justify-content: center;
                     //align-items: center;
                   `}
@@ -168,13 +202,35 @@ class Nav extends React.Component{
                         Hi! 👋
                         <br/>
                         <br/>
-                        My name is Jacob Wolf (yes that's my real name).
-                        I’m a teacher, programmer, and researcher trying to improve the ways we teach
-                        people about technology.
+                        My name is Jacob Wolf.
+                        <br/>
+                        I’m a {' '}
+                        <SectionLink 
+                          sectionRef={this.sectionRefs[0]}
+                          onButtonClick={this.scrollToSection}
+                          section={sections[0]}
+                        >
+                          teacher
+                        </SectionLink>,{' '}
+                        <SectionLink 
+                          sectionRef={this.sectionRefs[1]}
+                          onButtonClick={this.scrollToSection}
+                          section={sections[1]}
+                        >
+                          programmer
+                        </SectionLink>, and{' '}
+                        <SectionLink 
+                          sectionRef={this.sectionRefs[2]}
+                          onButtonClick={this.scrollToSection}
+                          section={sections[2]}
+                        >
+                          researcher
+                        </SectionLink>{' '}
+                        trying to improve the ways we teach people about technology.
                         <br/>
                         <br/>
                         Scroll down to learn more about some of the 
-                        things I’m working on or you can contact me any of the ways below.
+                        things I’m working on or contact me any of the ways below.
                       </text>
                     }
                   </div>

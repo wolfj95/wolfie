@@ -9,7 +9,6 @@ import { sections } from '../data/sections'
 // components
 import Layout from '../components/layout'
 import Nav from '../components/nav'
-import IndexSpacer from '../components/spacer'
 import SectionItem from '../components/item'
 
 // hooks
@@ -19,6 +18,14 @@ import useWindowDimensions from '../components/window'
 const container = css({
   margin: rhythm(2)
 })
+
+const contactLink = css({
+  flexGrow: 1,
+  padding: '15px',
+  textDecoration: 'none',
+  color: 'black'
+})
+
 
 
 // markup
@@ -80,15 +87,57 @@ const IndexPage = () => {
             />
             <div className="contact"
                 css={[
-                  container,
                   {
-                    height: 'calc(75vh - 300px)'
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexWrap: 'wrap',
+                    textAlign: 'center',
+                    padding: rhythm(2),
+                    height: 'calc(75vh - 300px)',
+                    maxWidth: '600px',
                   }
                 ]}
             >
-              github
-              linkedin
-              cv
+              <a
+                href="#"
+                css={[
+                  contactLink,
+                ]}
+              >
+                &#128187;
+                <br/>
+                github
+              </a>
+              <a
+                href="#"
+                css={[
+                  contactLink,
+                ]}
+              >
+                &#128104;&#8205;&#128188;
+                <br/>
+                linkedin
+              </a>
+              <a
+                href="#"
+                css={[
+                  contactLink,
+                ]}
+              >
+                &#128196;
+                <br/>
+                cv
+              </a>
+              <a
+                href="#"
+                css={[
+                  contactLink,
+                ]}
+              >
+                &#128235;
+                <br/>
+                email
+              </a>
             </div>
           </div>
           <div className="sections">

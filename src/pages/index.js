@@ -78,8 +78,9 @@ const IndexPage = () => {
             </div>
             <Waypoint 
               onEnter={({ event }) => {
-                navRef.current.showSpeechBubble()
                 navRef.current.setHighlightIndex(-1)
+                navRef.current.setSpeechBubbleIndex(-1)
+                navRef.current.showSpeechBubble()
               }} 
               onLeave={({ event }) => {
                 navRef.current.hideSpeechBubble()
@@ -155,6 +156,7 @@ const IndexPage = () => {
                     console.log("enter top")
                     if (previousPosition === Waypoint.below) {
                       navRef.current.setHighlightIndex(index)
+                      navRef.current.setSpeechBubbleIndex(index)
                       navRef.current.showSpeechBubble()
                     } 
                   }} 
@@ -178,6 +180,7 @@ const IndexPage = () => {
                   onEnter={({ previousPosition, event }) => {
                     console.log("enter bottom")
                     if (previousPosition === Waypoint.above) {
+                      navRef.current.setSpeechBubbleIndex(index)
                       navRef.current.showSpeechBubble()
                     } 
                   }} 

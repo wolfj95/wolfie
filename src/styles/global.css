@@ -2,3 +2,21 @@ html {
   /*background-color: lavenderblush;*/
   scroll-behavior: smooth;
 }
+
+.speech-enter {
+  opacity: 0.01;
+}
+
+.speech-enter.speech-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.speech-leave {
+  opacity: 1;
+}
+
+.speech-leave.speech-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
+}

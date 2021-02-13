@@ -1,4 +1,6 @@
 import { teachingClass, programmingClass, researchClass, etcClass } from '../styles/sections'
+import constructionismPaper from "../pdfs/recovering-constructionism-2020.pdf"
+import { Link } from 'gatsby'
 
 export const sections = [
   {
@@ -9,30 +11,26 @@ export const sections = [
     projects: [
       {
         projectTitle: "Making with Code",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "For the last two years, I’ve been designing, teaching, and researching a constructionist computer science curriculum at a secondary school in Hong Kong. The program aims to engage grade 9 and grade 10 students with a breadth of topics in computer science through personally-meaningful projects.",
         list: [
-          {
-            text: "test",
-            link: "www.google.com"
-          },
-          {
-            text: "test1",
-            link: "www.yahoo.com"
-          }
+          (
+            <a href="https://cs.fablearn.org">Curriculum homepage</a>
+          ),
+          (
+            <p>Building games to learn OOP (<a href="#">project page</a>) (<a href="#">repo</a>)</p>
+          ),
+          (
+            <p>Designing and implementing queues to explore ADTS (<a href="#">project page</a>) (<a href="#">repo</a>)</p>
+          )
         ]
       },
       {
         projectTitle: "Evaluating EdTech",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "After taking a class about designing education technologies, my friend Jenny Han and I decided that we needed a more solid framework to evaluate the impact edtech had on students and society. So, we designed and led a seminar investigating the intersection of our technical education and learning philosophies/frameworks like critical pedagogy, constructivism, behaviorism, and social reconstructionism.",
         list: [
-          {
-            text: "test",
-            link: "www.google.com"
-          },
-          {
-            text: "test1",
-            link: "www.yahoo.com"
-          }
+          (
+            <a href="https://docs.google.com/document/d/e/2PACX-1vR2e6L6I58liGUSzHOlHw_rJY3MxGVThr2O-MrlB4lLGDqfAbQ_8TF9y3RyJYrsPVd2WSE6vQC_ij55/pub">Syllabus</a>
+          ),
         ]
       }
     ]
@@ -45,40 +43,35 @@ export const sections = [
     projects: [
       {
         projectTitle: "Blessings",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "As 2020 ended, I built a web app to share blessings for 2021 with the people I care about. There is often an urgency around learning computational skills and concepts in order to generate economic value through scale. However, with this project I wanted to see what other forms of value (social, spiritual, emotional, etc.) I could produce by focusing on building something for a small, personally-meaningful group of people.",
         list: [
-          {
-            text: "sample blessing",
-            link: "https://blessings.jacobhwolf.com/sample"
-          },
-          {
-            text: "github repo",
-            link: "https://github.com/wolfj95/blessings-app"
-          },
+          (
+            <p><a href="http://blessings.jacobhwolf.com/sample">sample blessing</a></p>
+          ),
+          (
+            <p><a href="https://github.com/wolfj95/blessings-app">project repo</a></p>
+          ),
         ]
       },
       {
         projectTitle: "Interneditor",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "As part of the Tactical Internet Collective, I am working to reimagine the ways we conceptualize and interact with the internet. In our first major project, we are building a browser extension that allows you to make persistent edits to the web pages you visit. In doing so, we hope to diminish the divide between a user and a creator on the internet.",
         list: [
-          {
-            text: "github repo",
-            link: "https://github.com/Tactical-Internetism/interneditor"
-          },
+          (
+            <p><a href="https://github.com/Tactical-Internetism/interneditor">project repo</a></p>
+          ),
         ]
       },
       {
         projectTitle: "The Sky When You Were Born",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "In response to the challenges posed by distance and differing time zones, I’ve been creating digital experiences to share with friends during momentous occasions like birthdays or graduation. This project aggregates all of the photos from Flickr taken on a particular day and tagged with “sky” (or any other tag you put in the url parameters). You can try it out for yourself by changing the date/tag in the url with date format mmddyyyy.",
         list: [
-          {
-            text: "sample",
-            link: "https://birthday-views.glitch.me/?name=Name&date=06301997&tag=sky"
-          },
-          {
-            text: "glitch repo",
-            link: "https://glitch.com/edit/#!/birthday-views"
-          },
+          (
+            <p><a href="https://birthday-views.glitch.me/?name=Name&date=06301997&tag=sky">sample card</a></p>
+          ),
+          (
+            <p><a href="https://glitch.com/edit/#!/birthday-views">project repo</a></p>
+          ),
         ]
       }
     ]
@@ -91,26 +84,20 @@ export const sections = [
     projects: [
       {
         projectTitle: "Constructionism 2020 Paper",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        description: "Because of its emphasis on personal motivation, the constructionist computer science course I design and teach offers many opportunities to better understand how students relate to computational literacy. In particular, project-based assessment has allowed us to reconsider the priorities of introductory computer science education. Currently, the team working on the curriculum published a conference paper describing our vision for the course and the research we are performing on the course.",
         list: [
-          {
-            text: "Recovering Constructionism in Computer Science: Design of a Ninth-grade Introductory Computer Science Course",
-            link: "www.google.com"
-          },
-          {
-            text: "full proceedings",
-            link: "http://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf"
-          }
+          (
+            <p>Recovering Constructionism in Computer Science: Design of a Ninth-grade Introductory Computer Science Course <a href={constructionismPaper}>(paper)</a> <a href="http://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf">(full proceedings)</a></p>
+          ),
         ]
       },
       {
         projectTitle: "Honors Thesis",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
         list: [
-          {
-            text: "Scripting Social Learning: Investigating Students’ Perceptions of Social Constructivist Learning in Minerva’s Online Learning Environment",
-            link: "https://stacks.stanford.edu/file/druid:gt160tf9972/Thesis%20Final.pdf"
-          },
+          (
+            <p><a href="https://stacks.stanford.edu/file/druid:gt160tf9972/Thesis%20Final.pdf">Scripting Social Learning: Investigating Students’ Perceptions of Social Constructivist Learning in Minerva’s Online Learning Environment</a></p>
+          )
         ]
       }
     ]
@@ -125,28 +112,18 @@ export const sections = [
         projectTitle: "Making with Code",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
         list: [
-          {
-            text: "test",
-            link: "www.google.com"
-          },
-          {
-            text: "test1",
-            link: "www.yahoo.com"
-          }
+          (
+            <p>something here</p>
+          )
         ]
       },
       {
         projectTitle: "Evaluating EdTech",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
         list: [
-          {
-            text: "test",
-            link: "www.google.com"
-          },
-          {
-            text: "test1",
-            link: "www.yahoo.com"
-          }
+          (
+            <p>something here</p>
+          )
         ]
       }
     ]

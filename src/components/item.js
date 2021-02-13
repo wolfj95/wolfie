@@ -31,9 +31,7 @@ export default function SectionItem (props) {
           <li
             key={index}
           >
-            <Link to={listItem.link}>
-              {listItem.text}
-            </Link>
+            {listItem}
           </li>
         )}
       </ul>

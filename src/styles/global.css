@@ -18,5 +18,5 @@ html {
 
 .speech-leave.speech-leave-active {
   opacity: 0.01;
-  transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-out;
 }

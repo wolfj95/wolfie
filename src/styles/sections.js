@@ -14,9 +14,11 @@ export const teachingClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: teachingClassColor,
     color: 'white',
+    transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy 5% ' + teachingClassColor,
+    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: teachingClassColor,
       color: 'white',
@@ -29,9 +31,11 @@ export const programmingClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: programmingClassColor,
     color: 'white',
+    transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy 5% ' + programmingClassColor,
+    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: programmingClassColor,
       color: 'white',
@@ -44,13 +48,15 @@ export const researchClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: researchClassColor,
     color: 'white',
+    transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy 5% ' + researchClassColor,
+    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: researchClassColor,
       color: 'white',
-      textDecoration: 'none'
+      textDecoration: 'none',
     }
   }
 })
@@ -58,14 +64,16 @@ export const researchClass = css({
 export const etcClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: etcClassColor,
-    color: 'white'
+    color: 'white',
+    transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy 5% ' + etcClassColor,
+    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: etcClassColor,
       color: 'white',
-      textDecoration: 'none'
+      textDecoration: 'none',
     }
   }
 })

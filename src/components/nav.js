@@ -37,7 +37,13 @@ class NavLink extends React.Component {
         className="nav-link"
         css={[
           navLink,
-          this.props.highlightIndex === this.props.index ? this.props.section.sectionClass : 'none'
+          this.props.highlightIndex === this.props.index ?
+            this.props.section.sectionClass
+          :
+            {
+              backgroundColor: 'transparent',
+              transition: 'background-color 0.5s'
+            }
         ]}
       >
         <h3>

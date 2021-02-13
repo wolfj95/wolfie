@@ -9,7 +9,7 @@ html {
 
 .speech-enter.speech-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 100ms ease-in;
 }
 
 .speech-leave {
@@ -18,5 +18,5 @@ html {
 
 .speech-leave.speech-leave-active {
   opacity: 0.01;
-  transition: opacity 200ms ease-out;
+  transition: opacity 100ms ease-out;
 }

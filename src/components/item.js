@@ -23,9 +23,13 @@ export default function SectionItem (props) {
       >
         {props.title}
       </h1>
-      <p>
-        {props.description}
-      </p>
+      { props.description ?
+        <p>
+          {props.description}
+        </p>
+      :
+        null
+      }
       <ul>
         {props.list.map((listItem, index) =>
           <li

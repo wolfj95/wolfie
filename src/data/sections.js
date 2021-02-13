@@ -46,10 +46,10 @@ export const sections = [
         description: "As 2020 ended, I built a web app to share blessings for 2021 with the people I care about. There is often an urgency around learning computational skills and concepts in order to generate economic value through scale. However, with this project I wanted to see what other forms of value (social, spiritual, emotional, etc.) I could produce by focusing on building something for a small, personally-meaningful group of people.",
         list: [
           (
-            <p><a href="http://blessings.jacobhwolf.com/sample">sample blessing</a></p>
+            <p><a href="http://blessings.jacobhwolf.com/sample">Sample blessing</a></p>
           ),
           (
-            <p><a href="https://github.com/wolfj95/blessings-app">project repo</a></p>
+            <p><a href="https://github.com/wolfj95/blessings-app">Project repo</a></p>
           ),
         ]
       },
@@ -58,7 +58,7 @@ export const sections = [
         description: "As part of the Tactical Internet Collective, I am working to reimagine the ways we conceptualize and interact with the internet. In our first major project, we are building a browser extension that allows you to make persistent edits to the web pages you visit. In doing so, we hope to diminish the divide between a user and a creator on the internet.",
         list: [
           (
-            <p><a href="https://github.com/Tactical-Internetism/interneditor">project repo</a></p>
+            <p><a href="https://github.com/Tactical-Internetism/interneditor">Project repo</a></p>
           ),
         ]
       },
@@ -67,10 +67,10 @@ export const sections = [
         description: "In response to the challenges posed by distance and differing time zones, I’ve been creating digital experiences to share with friends during momentous occasions like birthdays or graduation. This project aggregates all of the photos from Flickr taken on a particular day and tagged with “sky” (or any other tag you put in the url parameters). You can try it out for yourself by changing the date/tag in the url with date format mmddyyyy.",
         list: [
           (
-            <p><a href="https://birthday-views.glitch.me/?name=Name&date=06301997&tag=sky">sample card</a></p>
+            <p><a href="https://birthday-views.glitch.me/?name=Name&date=06301997&tag=sky">Sample card</a></p>
           ),
           (
-            <p><a href="https://glitch.com/edit/#!/birthday-views">project repo</a></p>
+            <p><a href="https://glitch.com/edit/#!/birthday-views">Project repo</a></p>
           ),
         ]
       }
@@ -83,7 +83,7 @@ export const sections = [
     speechSVGPath: "M119.921,220.673C119.921,220.673 141.464,206.977 142.446,205.995C145.398,203.044 149.953,199.806 152.948,197.202C164.651,187.026 164.492,180.18 167.386,165.707C171.695,144.165 166.302,121.378 210.254,103.11C269.157,78.627 396.799,87.869 461.67,88.172C509.035,88.393 680.15,82.098 701.59,119.218C721.339,153.412 716.669,172.034 715.304,196.147C713.675,224.934 704.01,259.162 696.852,271.092C673.721,309.643 643.788,296.455 595.445,302.059C565.329,305.55 507.124,302.872 473.327,303.545C458.812,303.834 375.79,305.17 356.418,305.903C344.572,306.351 249.926,308.548 209.353,294.712C187.291,287.189 180.74,254.7 172.859,230.318C171.664,226.62 168.975,210.802 166.468,208.294C165.768,207.595 157.734,209.976 153.643,211.533C146.719,214.168 123.333,220.673 119.921,220.673Z",
     projects: [
       {
-        projectTitle: "Constructionism 2020 Paper",
+        projectTitle: "Computer Science Education",
         description: "Because of its emphasis on personal motivation, the constructionist computer science course I design and teach offers many opportunities to better understand how students relate to computational literacy. In particular, project-based assessment has allowed us to reconsider the priorities of introductory computer science education. Currently, the team working on the curriculum published a conference paper describing our vision for the course and the research we are performing on the course.",
         list: [
           (
@@ -92,8 +92,8 @@ export const sections = [
         ]
       },
       {
-        projectTitle: "Honors Thesis",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        projectTitle: "Technology and Social Learning",
+        description: "In the time before all learning became online learning, I was curious about how technological mediation impacted the social dimensions of learning. Following this curiosity, I interviewed students attending an elite online university to try to understand technology’s effect on their social learning environment. These interviews formed the basis of my senior honor’s thesis exploring the impacts of technologically-mediated social scripting in online learning environments.",
         list: [
           (
             <p><a href="https://stacks.stanford.edu/file/druid:gt160tf9972/Thesis%20Final.pdf">Scripting Social Learning: Investigating Students’ Perceptions of Social Constructivist Learning in Minerva’s Online Learning Environment</a></p>
@@ -109,20 +109,35 @@ export const sections = [
     speechSVGPath: "M119.921,220.673C119.921,220.673 141.464,206.977 142.446,205.995C145.398,203.044 149.953,199.806 152.948,197.202C164.651,187.026 168.019,176.974 173.329,163.683C184.27,136.293 190.436,121.369 207.643,112.546C226.982,102.629 239.551,100.536 259.763,99.266C291.69,97.26 300.038,96.293 349.002,95.761C394.865,95.263 498.57,102.12 515.429,102.399C578.337,103.44 653.258,103.731 665.563,106.005C675.87,107.91 708.145,104.718 721.467,137.526C729.717,157.842 727.719,172.586 720.47,186.775C708.874,209.477 678.401,221.424 649.357,225.005C620.377,228.578 558.687,229.655 524.899,228.466C498.255,227.528 408.589,225.988 385.563,225.938C366.077,225.896 300.099,222.584 264.551,224.019C236.224,225.163 205.226,232.816 183.331,219.869C172.893,213.697 174.837,207.932 168.641,205.828C163.517,204.088 158.846,207.571 153.156,210.645C145.555,214.75 123.333,220.673 119.921,220.673Z",
     projects: [
       {
-        projectTitle: "Making with Code",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        projectTitle: "Reading",
+        description: "",
         list: [
           (
-            <p>something here</p>
+            <p><em>How To Do Nothing</em> by Jenny Odell</p>
+          ),
+          (
+            <p><a href="https://www.newyorker.com/magazine/2020/08/03/heirlooms">"Heirlooms"</a> by Byran Washington</p>
+          ),
+          (
+            <p><em>Uncanny Valley</em> by Anna Wiener</p>
+          ),
+          (
+            <p>The <em>Broken Earth</em> Trilogy by N.K. Jemisin</p>
           )
         ]
       },
       {
-        projectTitle: "Evaluating EdTech",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tempor tellus, ut blandit nibh tincidunt luctus. Curabitur pretium massa ultrices felis dictum, vitae aliquet neque hendrerit. Suspendisse varius arcu eget nulla ultrices, vitae congue ipsum suscipit. Vestibulum dolor augue, cursus gravida lobortis sed, tempus ut lacus. Aliquam ligula lacus, dapibus nec mollis non, lacinia eget neque. Proin porttitor in erat non vestibulum. Morbi tristique urna volutpat, consectetur nunc sed, dictum nibh. Quisque non bibendum nibh. Vestibulum leo massa, vehicula nec leo a, dapibus iaculis quam. Sed dapibus in arcu eget tincidunt.",
+        projectTitle: "Cooking",
+        description: "",
         list: [
           (
-            <p>something here</p>
+            <p><a href="https://www.saltfatacidheat.com/fat/ligurian-focaccia">Samin Nosrat’s Focaccia</a> but with my sourdough starter</p>
+          ),
+          (
+            <p><a href="https://www.theperfectloaf.com/sourdough-pizza-dough-and-recipes/#tasty-recipes-12381">This pizza dough from Maurizio Leo</a> (also with my sourdough starter)</p>
+          ),
+          (
+            <p>A riff off <a href="https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric">Allison Roman’s chickpea stew</a> but with canned tomatoes</p>
           )
         ]
       }

@@ -42,7 +42,7 @@ class NavLink extends React.Component {
           :
             {
               backgroundColor: 'transparent',
-              transition: 'background-color 0.5s'
+              transition: 'background-color 0.1s'
             }
         ]}
       >

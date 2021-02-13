@@ -14,12 +14,12 @@ export const teachingClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: teachingClassColor,
     color: 'white',
-    transition: 'background-color 0.5s, color 0.5s',
+    transition: 'background-color 0.1s, color 0.1s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy ' + teachingClassColor,
     textDecorationThickness: '5%',
-    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
+    transition: 'background-color 0.1s, color 0.1s, text-decoration 0.1s',
     '&:hover': {
       backgroundColor: teachingClassColor,
       color: 'white',
@@ -32,12 +32,12 @@ export const programmingClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: programmingClassColor,
     color: 'white',
-    transition: 'background-color 0.5s, color 0.5s',
+    transition: 'background-color 0.1s, color 0.1s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy ' + programmingClassColor,
     textDecorationThickness: '5%',
-    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
+    transition: 'background-color 0.1s, color 0.1s, text-decoration 0.1s',
     '&:hover': {
       backgroundColor: programmingClassColor,
       color: 'white',
@@ -50,12 +50,12 @@ export const researchClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: researchClassColor,
     color: 'white',
-    transition: 'background-color 0.5s, color 0.5s',
+    transition: 'background-color 0.1s, color 0.1s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy ' + researchClassColor,
     textDecorationThickness: '5%',
-    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
+    transition: 'background-color 0.1s, color 0.1s, text-decoration 0.1s',
     '&:hover': {
       backgroundColor: researchClassColor,
       color: 'white',
@@ -68,12 +68,12 @@ export const etcClass = css({
   '&.nav-link,&.item-header': {
     backgroundColor: etcClassColor,
     color: 'white',
-    transition: 'background-color 0.5s, color 0.5s',
+    transition: 'background-color 0.1s, color 0.1s',
   },
   '&.speech-link': {
     textDecoration: 'underline wavy ' + etcClassColor,
     textDecorationThickness: '5%',
-    transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
+    transition: 'background-color 0.1s, color 0.1s, text-decoration 0.1s',
     '&:hover': {
       backgroundColor: etcClassColor,
       color: 'white',

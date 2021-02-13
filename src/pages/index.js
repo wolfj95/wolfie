@@ -50,6 +50,7 @@ const IndexPage = () => {
         <div
           css={css`
             position: sticky;
+            position: -webkit-sticky;
             top: 0;
             height: 100vh;
           `}

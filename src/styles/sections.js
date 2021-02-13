@@ -17,7 +17,8 @@ export const teachingClass = css({
     transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
-    textDecoration: 'underline wavy 5% ' + teachingClassColor,
+    textDecoration: 'underline wavy ' + teachingClassColor,
+    textDecorationThickness: '5%',
     transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: teachingClassColor,
@@ -34,7 +35,8 @@ export const programmingClass = css({
     transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
-    textDecoration: 'underline wavy 5% ' + programmingClassColor,
+    textDecoration: 'underline wavy ' + programmingClassColor,
+    textDecorationThickness: '5%',
     transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: programmingClassColor,
@@ -51,7 +53,8 @@ export const researchClass = css({
     transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
-    textDecoration: 'underline wavy 5% ' + researchClassColor,
+    textDecoration: 'underline wavy ' + researchClassColor,
+    textDecorationThickness: '5%',
     transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: researchClassColor,
@@ -68,7 +71,8 @@ export const etcClass = css({
     transition: 'background-color 0.5s, color 0.5s',
   },
   '&.speech-link': {
-    textDecoration: 'underline wavy 5% ' + etcClassColor,
+    textDecoration: 'underline wavy ' + etcClassColor,
+    textDecorationThickness: '5%',
     transition: 'background-color 0.2s, color 0.2s, text-decoration 0.2s',
     '&:hover': {
       backgroundColor: etcClassColor,

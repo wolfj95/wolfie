@@ -3,12 +3,13 @@ import { css } from '@emotion/react'
 const teachingClassColor = '#ff595e'
 const programmingClassColor = '#8ac926'
 const researchClassColor = '#1982c4'
-const etcClassColor = '#6a4c93'
+const etcClassColor = '#FF9506'
 //red: ff595e
 //yellow: ffca3a
 //green: 8ac926
 //blue: 1982c4
 //purple: 6a4c93
+//orange: FF9506
 
 export const teachingClass = css({
   '&.nav-link,&.item-header': {

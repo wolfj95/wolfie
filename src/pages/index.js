@@ -1,11 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { css } from '@emotion/react'
 import { rhythm } from '../utils/typography'
 import { Waypoint } from 'react-waypoint';
 
 // data
 import { sections } from '../data/sections'
+import resume from "../pdfs/Jacob-Wolf-Resume.pdf"
 
 // components
 import Layout from '../components/layout'
@@ -127,16 +127,16 @@ const IndexPage = () => {
                 <br/>
                 linkedin
               </a>
-              <Link
-                to="resume"
+              <a
+                href={resume}
                 css={[
                   contactLink,
                 ]}
               >
                 &#128196;
                 <br/>
-                cv
-              </Link>
+                resume
+              </a>
               <a
                 href="mailto:jacob.h.wolf@gmail.com"
                 css={[

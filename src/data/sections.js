@@ -1,6 +1,6 @@
 import { teachingClass, programmingClass, researchClass, etcClass } from '../styles/sections'
 import constructionismPaper from "../pdfs/recovering-constructionism-2020.pdf"
-import { Link } from 'gatsby'
+import patchworkPaper from "../pdfs/patchwork-2018.pdf"
 
 export const sections = [
   {
@@ -17,10 +17,10 @@ export const sections = [
             <a href="https://cs.fablearn.org">Curriculum homepage</a>
           ),
           (
-            <p>Building games to learn OOP (<a href="#">project page</a>) (<a href="#">repo</a>)</p>
+            <p>Example project: Making animations with turtle to learn Python basics (<a href="http://cs.fablearn.org/courses/cs9/unit00/project/">project page</a>) (<a href="https://github.com/the-isf-academy/project-animation">repo</a>)</p>
           ),
           (
-            <p>Designing and implementing queues to explore ADTS (<a href="#">project page</a>) (<a href="#">repo</a>)</p>
+            <p>Example project: Designing and implementing queues to explore ADTS (<a href="http://cs.fablearn.org/courses/cs10/unit01/project/">project page</a>) (<a href="https://github.com/the-isf-academy/project-queue">repo</a>)</p>
           )
         ]
       },
@@ -46,7 +46,7 @@ export const sections = [
         description: "As 2020 ended, I built a web app to share blessings for 2021 with the people I care about. There is often an urgency around learning computational skills and concepts in order to generate economic value through scale. However, with this project I wanted to see what other forms of value (social, spiritual, emotional, etc.) I could produce by focusing on building something for a small, personally-meaningful group of people.",
         list: [
           (
-            <p><a href="http://blessings.jacobhwolf.com/sample">Sample blessing</a></p>
+            <p><a href="http://blessings.wolfie.dev/sample">Sample blessing</a></p>
           ),
           (
             <p><a href="https://github.com/wolfj95/blessings-app">Project repo</a></p>
@@ -79,7 +79,7 @@ export const sections = [
   {
     sectionTitle: "Research",
     sectionClass: researchClass,
-    sectionIntro: "I'm curious about the most effective, liberating ways to teach computational literacy. Recently, I've been exploring new ways to assess computational literacy that challenge prescritive notions of traditional test-based assessment.",
+    sectionIntro: "I'm curious about the most effective, liberating ways to teach computational literacy. Recently, I've been exploring new ways to assess computational literacy that challenge prescriptive notions of traditional test-based assessment.",
     speechSVGPath: "M119.921,220.673C119.921,220.673 141.464,206.977 142.446,205.995C145.398,203.044 149.953,199.806 152.948,197.202C164.651,187.026 164.492,180.18 167.386,165.707C171.695,144.165 166.302,121.378 210.254,103.11C269.157,78.627 396.799,87.869 461.67,88.172C509.035,88.393 680.15,82.098 701.59,119.218C721.339,153.412 716.669,172.034 715.304,196.147C713.675,224.934 704.01,259.162 696.852,271.092C673.721,309.643 643.788,296.455 595.445,302.059C565.329,305.55 507.124,302.872 473.327,303.545C458.812,303.834 375.79,305.17 356.418,305.903C344.572,306.351 249.926,308.548 209.353,294.712C187.291,287.189 180.74,254.7 172.859,230.318C171.664,226.62 168.975,210.802 166.468,208.294C165.768,207.595 157.734,209.976 153.643,211.533C146.719,214.168 123.333,220.673 119.921,220.673Z",
     projects: [
       {
@@ -99,18 +99,27 @@ export const sections = [
             <p><a href="https://stacks.stanford.edu/file/druid:gt160tf9972/Thesis%20Final.pdf">Scripting Social Learning: Investigating Students’ Perceptions of Social Constructivist Learning in Minerva’s Online Learning Environment</a></p>
           )
         ]
+      },
+      {
+        projectTitle: "Computing & Identity",
+        description: "As part of a course exploring the practical skills and theoretical frameworks of learning technology design, I was curious about the way children learn about identity. With a team of other students, I developed and researched a construction kit integrating the expressive nature of clothing with the computational power of e-textiles.",
+        list: [
+          (
+            <p><a href={patchworkPaper}>Patchwork: An Expressive E-Textile Construction Kit</a></p>
+          )
+        ]
       }
     ]
   },
   {
     sectionTitle: "etc.",
     sectionClass: etcClass,
-    sectionIntro: "I also love to cook vegetarian food and read. Here are some of the things I've enjoyed recently.",
+    sectionIntro: "I also love to cook vegetarian food, read, and listen to music and podcasts while running or hiking.",
     speechSVGPath: "M119.921,220.673C119.921,220.673 141.464,206.977 142.446,205.995C145.398,203.044 149.953,199.806 152.948,197.202C164.651,187.026 168.019,176.974 173.329,163.683C184.27,136.293 190.436,121.369 207.643,112.546C226.982,102.629 239.551,100.536 259.763,99.266C291.69,97.26 300.038,96.293 349.002,95.761C394.865,95.263 498.57,102.12 515.429,102.399C578.337,103.44 653.258,103.731 665.563,106.005C675.87,107.91 708.145,104.718 721.467,137.526C729.717,157.842 727.719,172.586 720.47,186.775C708.874,209.477 678.401,221.424 649.357,225.005C620.377,228.578 558.687,229.655 524.899,228.466C498.255,227.528 408.589,225.988 385.563,225.938C366.077,225.896 300.099,222.584 264.551,224.019C236.224,225.163 205.226,232.816 183.331,219.869C172.893,213.697 174.837,207.932 168.641,205.828C163.517,204.088 158.846,207.571 153.156,210.645C145.555,214.75 123.333,220.673 119.921,220.673Z",
     projects: [
       {
         projectTitle: "Reading",
-        description: "",
+        description: "I enjoy science fiction, creative nonfiction essays, and generally anything that helps me make sense of this weird and wonderful world. Here's some writing I've enjoyed recently:",
         list: [
           (
             <p><em>How To Do Nothing</em> by Jenny Odell</p>
@@ -128,7 +137,7 @@ export const sections = [
       },
       {
         projectTitle: "Cooking",
-        description: "",
+        description: "Generally, I like to try to imagine vegetarian versions of the more meaty dishes I grew up eating like pulled pork. However, during the pandemic I got really into perfecting staples like bread, stew, and pickled goods. Here are some of the things I've cooked a lot in the last year:",
         list: [
           (
             <p><a href="https://www.saltfatacidheat.com/fat/ligurian-focaccia">Samin Nosrat’s Focaccia</a> but with my sourdough starter</p>
@@ -143,10 +152,10 @@ export const sections = [
       },
       {
         projectTitle: "Listening",
-        description: "",
+        description: "Judging by my Spotify Unwrapped stats, I leaned heavily (maybe a little too much so) on auditory experiences to get me through 2020. These are some of the podcasts and albums I kept returning to:",
         list: [
           (
-            <p><a href="https://gimletmedia.com/shows/reply-all">Reply All</a> podcast (and especially <a href="https://gimletmedia.com/shows/reply-all/dvhzkdo/172-the-test-kitchen-chapter-1">The Test Kitchen</a> series</p>
+            <p><a href="https://gimletmedia.com/shows/reply-all">Reply All</a> podcast (and especially <a href="https://gimletmedia.com/shows/reply-all/dvhzkdo/172-the-test-kitchen-chapter-1">The Test Kitchen</a> series)</p>
           ),
           (
             <p><a href="https://techwontsave.us/">Tech Won't Save Us</a> podcast</p>
@@ -154,6 +163,9 @@ export const sections = [
           (
             <p><em>Dreamland</em> by <a href="https://opensource.glassanimals.com/">Glass Animals</a></p>
           ),
+          (
+            <p><a href="https://blowback.show/">BLOWBACK</a> podcast</p>
+          )
         ]
       }
 

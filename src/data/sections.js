@@ -116,7 +116,7 @@ export const sections = [
             <p><em>How To Do Nothing</em> by Jenny Odell</p>
           ),
           (
-            <p><a href="https://www.newyorker.com/magazine/2020/08/03/heirlooms">"Heirlooms"</a> by Byran Washington</p>
+            <p><a href="https://www.newyorker.com/magazine/2020/08/03/heirlooms">"Heirlooms"</a> by Bryan Washington</p>
           ),
           (
             <p><em>Uncanny Valley</em> by Anna Wiener</p>
@@ -140,7 +140,23 @@ export const sections = [
             <p>A riff off <a href="https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric">Allison Roman’s chickpea stew</a> but with canned tomatoes</p>
           )
         ]
+      },
+      {
+        projectTitle: "Listening",
+        description: "",
+        list: [
+          (
+            <p><a href="https://gimletmedia.com/shows/reply-all">Reply All</a> podcast (and especially <a href="https://gimletmedia.com/shows/reply-all/dvhzkdo/172-the-test-kitchen-chapter-1">The Test Kitchen</a> series</p>
+          ),
+          (
+            <p><a href="https://techwontsave.us/">Tech Won't Save Us</a> podcast</p>
+          ),
+          (
+            <p><em>Dreamland</em> by <a href="https://opensource.glassanimals.com/">Glass Animals</a></p>
+          ),
+        ]
       }
+
     ]
   }
 ]

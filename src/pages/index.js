@@ -42,25 +42,33 @@ const IndexPage = () => {
   return (
     <Layout>
       <div
-        css={css`
-          display: grid;
-          grid-template-columns: 30% auto;
-        `}
+        css={{
+          display: 'grid',
+          '@media screen and (min-width: 40em)': {
+            gridTemplateColumns: '30% auto'
+          }
+        }}
       >
         <div
-          css={css`
-            position: sticky;
-            position: -webkit-sticky;
-            top: 0;
-            height: 100vh;
-          `}
+          css={[
+            { position: 'sticky'},
+            {
+              postion: '-webkit-sticky',
+              top: 0,
+              '@media screen and (min-width: 40em)': {
+                height: '100vh'
+              }
+            }
+          ]}
         >
           <Nav ref={navRef} sectionRefs={sectionRefs}/>
         </div>
         <div className="main"
           css={[
             {
-              maxWidth: '50vw'
+              '@media screen and (min-width: 40em)': {
+                maxWidth: '50vw'
+              }
             }
           ]}
         >

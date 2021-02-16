@@ -91,12 +91,10 @@ class Nav extends React.Component{
 
   showSpeechBubble (props) {
     this.setState({ showSpeech: true })
-    //console.log("show")
   }
 
   hideSpeechBubble (props) {
     this.setState({ showSpeech: false })
-    //console.log("hide")
   }
 
   setSpeechBubbleIndex (index) {
@@ -116,8 +114,6 @@ class Nav extends React.Component{
   }
 
   render () {
-    console.log("rerender nav. section refs: ", this.sectionRefs)
-    console.log("highlight index: ", this.state.highlightIndex)
     return (
         <div
           css={css`
@@ -162,7 +158,7 @@ class Nav extends React.Component{
               <CSSTransitionGroup
                 transitionName="speech"
                 transitionEnterTimeout={300}
-                transitionLEaveTimeout={300}
+                transitionLeaveTimeout={300}
               >
                 { this.state.showSpeech ?
                   <div

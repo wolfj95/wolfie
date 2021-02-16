@@ -32,13 +32,11 @@ const contactLink = css({
 // markup
 const IndexPage = () => {
   const navRef = React.createRef()
-  //const { innerHeight: height } = window
   const { height } = useWindowDimensions()
   let sectionRefs = []
   for (let i = 0; i < sections.length; i++) {
     sectionRefs.push(React.useRef(null))
   }
-  console.log("rerender index. section refs: ", sectionRefs)
   return (
     <Layout>
       <div
@@ -162,7 +160,6 @@ const IndexPage = () => {
               >
                 <Waypoint 
                   onEnter={({ previousPosition, event }) => {
-                    console.log("enter top")
                     if (previousPosition === Waypoint.below) {
                       navRef.current.setHighlightIndex(index)
                       navRef.current.setSpeechBubbleIndex(index)
@@ -170,7 +167,6 @@ const IndexPage = () => {
                     } 
                   }} 
                   onLeave={({ currentPosition, event }) => {
-                    console.log("leave top")
                     if (currentPosition === Waypoint.below) {
                       navRef.current.setHighlightIndex(index-1)
                       navRef.current.hideSpeechBubble()
@@ -187,14 +183,12 @@ const IndexPage = () => {
                   </div>
                 <Waypoint 
                   onEnter={({ previousPosition, event }) => {
-                    console.log("enter bottom")
                     if (previousPosition === Waypoint.above) {
                       navRef.current.setSpeechBubbleIndex(index)
                       navRef.current.showSpeechBubble()
                     } 
                   }} 
                   onLeave={({ currentPosition, event }) => {
-                    console.log("leave bottom")
                     if (currentPosition === Waypoint.above) {
                       navRef.current.hideSpeechBubble()
                     } 

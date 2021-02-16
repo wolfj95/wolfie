@@ -155,7 +155,7 @@ export const sections = [
         description: "Judging by my Spotify Unwrapped stats, I leaned heavily (maybe a little too much so) on auditory experiences to get me through 2020. These are some of the podcasts and albums I kept returning to:",
         list: [
           (
-            <p><a href="https://gimletmedia.com/shows/reply-all">Reply All</a> podcast (and especially <a href="https://gimletmedia.com/shows/reply-all/dvhzkdo/172-the-test-kitchen-chapter-1">The Test Kitchen</a> series)</p>
+            <p><a href="https://gimletmedia.com/shows/reply-all">Reply All</a> podcast</p>
           ),
           (
             <p><a href="https://techwontsave.us/">Tech Won't Save Us</a> podcast</p>

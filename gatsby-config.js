@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "wolfie.dev",
     titleTemplate: '%s • hello from jacob',
-    description: "I'm a teacher, programmer, and researcher. Check out some of the things I'm working on!",
+    description: "I'm a PhD student and researcher studying how people learn about computing. Check out some of the things I'm working on!",
     url: 'https://wolfie.dev',
     image: '/src/images/favicon.png'
   },

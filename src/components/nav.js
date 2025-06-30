@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { Link } from 'gatsby'
 import { rhythm } from '../utils/typography'
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 // data
 import { sections } from '../data/sections'
@@ -155,15 +155,15 @@ class Nav extends React.Component{
                 display: inline-block;
               `}
             >
-              <CSSTransitionGroup
-                transitionName="speech"
-                transitionEnterTimeout={300}
-                transitionLeaveTimeout={300}
-              >
-                { this.state.showSpeech ?
-                  <div
-                    ref={this.speechRef}
+              <TransitionGroup>
+                { this.state.showSpeech ? (
+                  <CSSTransition
                     key={this.state.speechBubbleIndex}
+                    timeout={300}
+                    classNames="speech"
+                  >
+                    <div
+                      ref={this.speechRef}
                     css={css`
                       position: absolute;
                       z-index: 1;
@@ -248,10 +248,9 @@ class Nav extends React.Component{
                       }
                     </div>
                   </div>
-                : 
-                  <div key={-2}></div>
-                }
-              </CSSTransitionGroup>
+                  </CSSTransition>
+                ) : null }
+              </TransitionGroup>
             </div>
           </div>
           <ul

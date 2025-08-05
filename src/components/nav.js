@@ -209,7 +209,9 @@ class Nav extends React.Component{
                       ]}
                     >
                       {this.state.speechBubbleIndex >= 0 ?
-                        sections[this.state.speechBubbleIndex].sectionIntro
+                        <div>
+                        {sections[this.state.speechBubbleIndex].sectionIntro}
+                        </div>
                       :
                         <p>
                           Hi! 👋
@@ -223,27 +225,26 @@ class Nav extends React.Component{
                             onButtonClick={this.scrollToSection}
                             section={sections[0]}
                           >
-                            teacher
+                            researcher
                           </SectionLink>,{' '}
                           <SectionLink 
                             sectionRef={this.sectionRefs[1]}
                             onButtonClick={this.scrollToSection}
                             section={sections[1]}
                           >
-                            programmer
+                            teacher
                           </SectionLink>, and{' '}
                           <SectionLink 
                             sectionRef={this.sectionRefs[2]}
                             onButtonClick={this.scrollToSection}
                             section={sections[2]}
                           >
-                            researcher
+                            programmer
                           </SectionLink>{' '}
-                          trying to improve the ways we teach people about technology.
+                          working on computing education across these domains.
                           <br/>
                           <br/>
-                          Scroll down to learn more about some of the 
-                          things I’m working on or contact me any of the ways below.
+                          Scroll down to learn more about some of my projects.
                         </p>
                       }
                     </div>

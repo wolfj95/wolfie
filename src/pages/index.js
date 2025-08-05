@@ -138,7 +138,7 @@ const IndexPage = () => {
                 resume
               </a>
               <a
-                href="mailto:jacob.h.wolf@gmail.com"
+                href="mailto:jwolf@g.harvard.edu"
                 css={[
                   contactLink,
                 ]}
@@ -172,7 +172,7 @@ const IndexPage = () => {
                       navRef.current.hideSpeechBubble()
                     } 
                   }} 
-                  //debug={true}
+                  debug={true}
                   bottomOffset='75%'
                 />
                   <div
@@ -194,7 +194,7 @@ const IndexPage = () => {
                     } 
                   }} 
                   topOffset={height*0.25 + 200}
-                  //debug={true}
+                  debug={true}
                 />
                 {section.projects.map((project, index) =>
                   <SectionItem 
